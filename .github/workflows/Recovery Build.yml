@@ -152,6 +152,11 @@ jobs:
       with:
         swap-size-gb: 12
 
+    - name: Remove unnecessary binaries
+      run: |
+        rm -rf /sbin/nano
+        rm -rf /sbin/htop
+
     - name: Building recovery
       run: |
         source build/envsetup.sh
